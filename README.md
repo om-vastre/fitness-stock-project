@@ -1,70 +1,141 @@
-# Getting Started with Create React App
+# 💪 Fitsta - Fitness Gym Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A comprehensive full-stack web application for managing gym operations, memberships, equipment, trainers, and customer engagement.
 
-## Available Scripts
+![React](https://img.shields.io/badge/React-18.2.0-61DAFB?logo=react)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.1.3-6DB33F?logo=springboot)
+![Java](https://img.shields.io/badge/Java-17-ED8B00?logo=openjdk)
+![MySQL](https://img.shields.io/badge/MySQL-Database-4479A1?logo=mysql)
+![Docker](https://img.shields.io/badge/Docker-Containerized-2496ED?logo=docker)
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+### 👤 Multi-Role Dashboard System
+- **Admin Dashboard** - Complete gym management with CRUD operations for customers, trainers, equipment, memberships, and purchases
+- **Trainer Dashboard** - Manage assigned members, track progress, and assign tasks
+- **User Dashboard** - View membership status, track fitness progress, assigned tasks, and purchase history
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 🔐 Authentication & Security
+- User registration with OTP verification via email
+- Secure login/logout functionality
+- Role-based access control (Admin, Trainer, User)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 🏋️ Core Modules
+- **Membership Management** - Create and manage membership plans with payment integration
+- **Equipment Store** - Browse, view details, and purchase fitness equipment
+- **Trainer Assignment** - Assign trainers to members for personalized guidance
+- **Task Management** - Trainers can assign and track workout tasks for members
+- **Progress Tracking** - Monitor member fitness progress over time
+- **Email Notifications** - Automated OTP and notification emails via SMTP
 
-### `npm test`
+### 💳 Payment Gateway
+- Integrated payment processing for memberships and equipment purchases
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Tech Stack
 
-### `npm run build`
+| Layer | Technology |
+|-------|------------|
+| Frontend | React 18, React Router DOM, Axios, React Scroll |
+| Backend | Java 17, Spring Boot 3.1.3, Spring Data JPA, Spring Mail |
+| Database | MySQL |
+| Build Tools | Maven, npm |
+| Containerization | Docker |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📁 Project Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+├── Frontend (React)
+│   ├── src/
+│   │   ├── api-client/       # API integration modules
+│   │   ├── component/        # Reusable UI components (14 components)
+│   │   ├── pages/            # Page components (12 pages)
+│   │   ├── sections/         # Dashboard section components (10 sections)
+│   │   ├── form/             # Form components (6 forms)
+│   │   └── css/              # Styling files
+│
+├── Backend (Spring Boot)
+│   ├── src/main/java/com/fitsta/
+│   │   ├── controller/       # REST API controllers
+│   │   ├── service/          # Business logic layer
+│   │   ├── repository/       # Data access layer
+│   │   └── model/            # Entity classes
+│   └── pom.xml               # Maven dependencies
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 Getting Started
 
-### `npm run eject`
+### Prerequisites
+- Node.js (v14+)
+- Java 17
+- MySQL Server
+- Maven
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Frontend Setup
+```bash
+# Clone the repository
+git clone https://github.com/soham-shinde/fitness-stock-project.git
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Navigate to project directory
+cd fitness-stock-project
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Install dependencies
+npm install
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Start development server
+npm start
+```
 
-## Learn More
+### Backend Setup
+```bash
+# Navigate to backend (api branch or Fitsta repo)
+git checkout api
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Configure MySQL database in application.properties
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Build and run
+mvn spring-boot:run
+```
 
-### Code Splitting
+### Docker Deployment
+```bash
+# Build Docker image
+docker build -t fitsta-api .
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Run container
+docker run -p 8080:8080 fitsta-api
+```
 
-### Analyzing the Bundle Size
+## 📸 Pages Overview
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+| Page | Description |
+|------|-------------|
+| Home | Landing page with gym information |
+| Login/SignUp | Authentication with OTP verification |
+| Admin Dashboard | Complete gym management interface |
+| Trainer Dashboard | Member and task management |
+| User Dashboard | Personal fitness tracking |
+| Store | Equipment browsing and purchase |
+| Payment Gateway | Secure payment processing |
+| About Us | Gym information |
+| Contact Us | Communication form |
 
-### Making a Progressive Web App
+## 🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-### Advanced Configuration
+## 📄 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+This project is open source and available under the [MIT License](LICENSE).
 
-### Deployment
+## 👥 Authors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- **Om Vastre** - Backend Development
+- **Soham Shinde** - Frontend Development
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+⭐ Star this repository if you find it helpful! 
